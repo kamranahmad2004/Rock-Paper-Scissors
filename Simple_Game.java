@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Simple_Game 
+public class Simple_Game
 {
     public static void main(String[] args) 
     {
@@ -28,13 +28,13 @@ public class Simple_Game
             System.out.println();
 
             // Checking user input
-            if (player_move.equals("Rock") || player_move.equals("Paper") || player_move.equals("Scissors")) 
+            if (player_move.equalsIgnoreCase("Rock") || player_move.equalsIgnoreCase("Paper") || player_move.equalsIgnoreCase("Scissors")) 
             {
                 System.out.println("Oponent chooses : " + computer_move);
                 System.out.println("You chooses : " + player_move);
                 System.out.println();
             } 
-            else if (player_move.equals("Quit") || player_move.equals("quit")) 
+            else if (player_move.equalsIgnoreCase("Quit")) 
             {
                 break;
             } 
@@ -47,7 +47,7 @@ public class Simple_Game
 
             // Calculating Results
 
-            if (player_move.equals(computer_move)) 
+            if (player_move.equalsIgnoreCase(computer_move)) 
             {
                 System.out.println("It becomes draw in this Stage");
                 System.out.println("_________________________ \n");
@@ -57,14 +57,15 @@ public class Simple_Game
             switch (player_move) 
             {
                 case "Rock":
-                    if (computer_move.equals("Paper")) 
+                case "rock":
+                    if (computer_move.equalsIgnoreCase("Paper")) 
                     {
                         System.out.println("Oponent wins this Stage");
                         System.out.println("_________________________ \n");
                         comp++;
                     }
 
-                    else if (computer_move.equals("Scissors")) 
+                    else if (computer_move.equalsIgnoreCase("Scissors")) 
                     {
                         System.out.println("You win this Stage");
                         System.out.println("_________________________ \n");
@@ -73,14 +74,15 @@ public class Simple_Game
                     break;
 
                 case "Paper":
-                    if (computer_move.equals("Rock")) 
+                case "paper":
+                    if (computer_move.equalsIgnoreCase("Rock")) 
                     {
                         System.out.println("You win this Stage");
                         System.out.println("_________________________ \n");
                         player++;
                     }
 
-                    else if (computer_move.equals("Scissors")) 
+                    else if (computer_move.equalsIgnoreCase("Scissors")) 
                     {
                         System.out.println("Oponent wins this Stage");
                         System.out.println("_________________________ \n");
@@ -89,14 +91,15 @@ public class Simple_Game
                     break;
 
                 case "Scissors":
-                    if (computer_move.equals("Rock")) 
+                case "scissors":
+                    if (computer_move.equalsIgnoreCase("Rock")) 
                     {
                         System.out.println("Oponent wins this Stage");
                         System.out.println("_________________________ \n");
                         comp++;
                     }
 
-                    else if (computer_move.equals("Paper")) 
+                    else if (computer_move.equalsIgnoreCase("Paper")) 
                     {
                         System.out.println("You wins this Stage");
                         System.out.println("_________________________ \n");
